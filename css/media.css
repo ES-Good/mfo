@@ -1,0 +1,13 @@
+@media (min-width: 576px) {
+  body {
+    font-size: 16px; }
+  .title {
+    font-size: 48px; }
+    .title_medium {
+      font-size: 30px; }
+    .title_small {
+      font-size: 24px; } }
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1600px; } }

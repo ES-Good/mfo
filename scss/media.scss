@@ -1,0 +1,32 @@
+@media(min-width:576px){
+    body{
+        font-size: 16px;
+    }
+    .title{
+        font-size: 48px;
+        &_medium{
+            font-size: 30px;
+        }
+        &_small{
+            font-size: 24px;
+        }
+    }
+}
+
+@media(min-width:768px){
+    
+}
+
+@media(min-width:992px){
+
+}
+
+@media(min-width:1200px){
+
+}
+
+@media(min-width:1400px){
+    .container{
+        max-width: 1600px;
+    }
+}
