@@ -22,7 +22,31 @@
 }
 
 @media(min-width:1200px){
-
+    .container-form-index{
+        padding: 60px 70px 70px;
+        border-radius: 15px;
+        transform: translateY(-80%);
+        .title_small{
+            max-width: 250px;
+        }
+        .input_text{
+            width: 30%;
+        }
+        .btn{
+            width: 30%;
+        }
+        form{
+            width: 80%;
+            position: relative;
+        }
+        span{
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 25px;
+            width: 80%;
+            font-size: inherit;
+        }
+    }
 }
 
 @media(min-width:1400px){

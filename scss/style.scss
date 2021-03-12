@@ -98,6 +98,53 @@ $red: #EB4B4D;
     }
 }
 
+.input{
+    &_text{
+        padding: 15px 0 15px 15px;
+        border-radius: 15px;
+        border: 1px solid #D9E0E8;
+    }
+}
+
+.container-form-index{
+    padding: 60px 0px 70px;
+    border-radius: 15px;
+    border: 1px solid #CADBE2;
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.3);
+    .title_small{
+        max-width: 250px;
+    }
+    .input_text{
+        width: auto;
+    }
+    .btn{
+        width: auto;
+    }
+    form{
+        width: 80%;
+        position: relative;
+    }
+    span{
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 25px;
+        font-size: 10px;
+        width: 80%;
+    }
+}
+
+.form-check-input:checked{
+    border: 1px solid #7F8B97;
+    background-color: $red;
+}
+
+.form-check{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .header{
     background-image: url(../img/header/bg.png);
     background-repeat: no-repeat;
@@ -115,6 +162,36 @@ $red: #EB4B4D;
     &__ico-box{
         &__text{
 
+        }
+    }
+}
+
+.receive{
+    background-color: #F4FBFE;
+}
+
+.why{
+    background-image: url(../img/why/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+    &__box{
+        &__title{
+            font-size: 18px;
+        }
+    }
+}
+
+.advantages{
+
+}
+
+.plus{
+    background-color: #fff;
+
+    &__box{
+        &__text{
+            font-size: 14px;
         }
     }
 }

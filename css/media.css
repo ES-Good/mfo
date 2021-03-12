@@ -8,6 +8,27 @@
     .title_small {
       font-size: 24px; } }
 
+@media (min-width: 1200px) {
+  .container-form-index {
+    padding: 60px 70px 70px;
+    border-radius: 15px;
+    transform: translateY(-80%); }
+    .container-form-index .title_small {
+      max-width: 250px; }
+    .container-form-index .input_text {
+      width: 30%; }
+    .container-form-index .btn {
+      width: 30%; }
+    .container-form-index form {
+      width: 80%;
+      position: relative; }
+    .container-form-index span {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 25px;
+      width: 80%;
+      font-size: inherit; } }
+
 @media (min-width: 1400px) {
   .container {
     max-width: 1600px; } }
