@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>PROFI CREDIT</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
@@ -20,13 +21,13 @@
                     <a href="">
                         <img src="img/logo.png" alt="">
                     </a>
-                    <p class="title_small text-white m-0">Быстрые займы от 5 000 до 100 000 рублей</p>
-                    <div>
-                        <div class="d-flex">
+                    <p class="title_small text-white m-0 d-none d-lg-block">Быстрые займы от 5 000 до 100 000 рублей</p>
+                    <div class="d-none d-lg-block">
+                        <div class="d-flex justify-content-end align-items-center">
                             <img src="img/phone.png" alt="">
-                            <a href="" class="styly-none">8 (812) 213-33-90</a>
+                            <a href="" class="styly-none title_small text-white">8 (812) 213-33-90</a>
                         </div>
-                        <p class="m-0">с 09.00 до 21.00 (МСК)</p>
+                        <p class="m-0 text-end">с 09.00 до 21.00 (МСК)</p>
                     </div>
                 </div>
                 <!-- top-block -->
@@ -61,13 +62,22 @@
         </div>
     </div>
     <div class="container fast-money">
-        <div class="row">
-            <div class="col-12 position-relative container-form-index d-flex flex-column flex-xl-row align-items-center justify-content-between bg-white">
+        <div class="row position-relative">
+            <div class="range-box">
+                <div class="range">
+                    <span class="range__track">
+                    </span>
+                    <input class="range__input" type="range" min="10000" max="100000" value="57000" step="1000">
+                </div>
+            </div>
+            <div class="col-12 container-form-index d-flex flex-column flex-xl-row align-items-center justify-content-between bg-white">
                 <h2 class="title title_small fw-700 mb-5 mb-xl-0">Сколько вам нужно?</h2>
-                <form action="#" class="d-flex flex-column flex-xl-row justify-content-between">
+                <form action="#" class="d-flex flex-column flex-xl-row justify-content-between position-relative">
+                    <div class="inner-out-sum">
+                        <p class="out-sum">57000</p>
+                    </div>
                     <input type="text" class="input_text mb-3 mb-xl-0" placeholder="Ваше имя">
-                    <input type="text" class="input_text mb-3 mb-xl-0" placeholder="Ваше имя">
-                    <input type="tel" class="input_text mb-5 mb-xl-0" placeholder="Ваш телефон">
+                    <input type="tel" class="input_text mb-5 mb-xl-0" placeholder="+7 (___) ___ - __ - __">
                     <button type="submit" class="btn btn_red">Получить деньги</button>
                 </form>
                 <div class="form-check">
@@ -84,40 +94,40 @@
         </div>
         <div class="d-flex justify-content-around">
             <div class="fast-money__ico-box d-flex flex-column justify-content-center align-items-center">
-                <div class="border-red-ico">
+                <div class="border-red-ico mb-3">
                     <img src="img/fast-money/ico/1.png" alt="">
                 </div>
-                <p class="fast-money__ico-box__text">Заполните
+                <p class="fast-money__ico-box__text text-center">Заполните
                 небольшую анкету</p>
             </div>
             <div class="fast-money__ico-box d-flex flex-column justify-content-center align-items-center">
-                <div class="border-red-ico">
+                <div class="border-red-ico mb-3">
                     <img src="img/fast-money/ico/2.png" alt="">
                 </div>
-                <p class="fast-money__ico-box__text">Заполните
+                <p class="fast-money__ico-box__text text-center">Заполните
                 небольшую анкету</p>
             </div>
             <div class="fast-money__ico-box d-flex flex-column justify-content-center align-items-center">
-                <div class="border-red-ico">
+                <div class="border-red-ico mb-3">
                     <img src="img/fast-money/ico/3.png" alt="">
                 </div>
-                <p class="fast-money__ico-box__text">Заполните
+                <p class="fast-money__ico-box__text text-center">Заполните
                 небольшую анкету</p>
             </div>
             <div class="fast-money__ico-box d-flex flex-column justify-content-center align-items-center">
-                <div class="border-red-ico">
+                <div class="border-red-ico mb-3">
                     <img src="img/fast-money/ico/4.png" alt="">
                 </div>
-                <p class="fast-money__ico-box__text">Заполните
+                <p class="fast-money__ico-box__text text-center">Заполните
                 небольшую анкету</p>
             </div>
         </div>
-        <div class="d-flex justify-content-center mt-5">
+        <div class="d-flex justify-content-center my-5">
             <button class="btn btn_red">Получить деньги</button>
         </div>
     </div>
-    <div class="container-fluid receive p-0">
-        <div class="container">
+    <div class="container-fluid receive px-0">
+        <div class="container loan">
             <div class="row">
                 <h2 class="title text-center fw-700">Как получить срочный займ?</h2>
             </div>
@@ -125,8 +135,8 @@
                 <div class="col-12 col-lg-5">
                     <img src="img/receive/1.png" alt="" class="w-100">
                 </div>
-                <div class="col-12 col-lg-7">
-                    <div class="receive__text-block">
+                <div class="col-12 col-xl-7 position-relative">
+                    <div class="receive__text-block receive__text-block_r">
                         <p class="fw-700">Во-первых, нужно подходить по следующим критериям:</p>
                         <ul>
                             <li>проживать в Москве, Московской области, Санкт-Петербурге, Ленинградской области или в любом другом регионе присутствия PROFI CREDIT (Самара, Тольятти, Нижний Новгород, Челябинск, Москва, Уфа, Екатеринбург, Калининград);</li>
@@ -138,9 +148,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-7">
-                    <div class="receive__text-block">
-                        <p class="fw-700">Во-вторых, необходимо подать онлайн-заявку на займ на сайте или позвонить на нашу горячую линию по номеру 8 (812) 213-33-90. Чтобы отправить онлайн-заявку на займ нужно выполнить всего 3 простых шага:/p>
+                <div class="col-12 col-xl-7 position-relative order-2 order-xl-1">
+                    <div class="receive__text-block receive__text-block_l">
+                        <p class="fw-700">Во-вторых, необходимо подать онлайн-заявку на займ на сайте или позвонить на нашу горячую линию по номеру 8 (812) 213-33-90. Чтобы отправить онлайн-заявку на займ нужно выполнить всего 3 простых шага:</p>
                         <ul>
                             <li>отметьте на калькуляторе нужную Вам сумму и срок, на который Вы хотели бы взять займ;</li>
                             <li>подтвердите свой выбор, нажав кнопку «Получить займ»;</li>
@@ -148,30 +158,37 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-lg-5 order-1 order-xl-2">
                     <img src="img/receive/2.png" alt="" class="w-100">
                 </div>
             </div>
-            <div class="row justify-content-center align-items-center">
-                <div class="col-12 col-lg-3">
-                    <p>Для получения займа могут потребоваться дополнительные документы.</p>
+            <div class="row my-5 justify-content-center align-items-center">
+                <div class="col-12 col-lg-3 ">
+                    <p class="fw-500 ">Для получения займа могут потребоваться дополнительные документы.</p>
                 </div>
-                <div class="col-12 col-lg-7">
+                <div class="col-12 col-lg-7 position-relative text-line">
                     <p>Получить займ вы сможете быстро, так как для выдачи денег достаточно одного паспорта. Если Вы пенсионер, то дополнительно потребуются пенсионное удостоверение и справка из ПФР.</p>
 
                     <p>
                         Процентная ставка при таких исходных данных составит от 0,48 % в день! А для клиентов, которые уже пользовались нашими услугами, доступны суммы до 100 000 рублей, процентная ставка от 0,42% в день!
                     </p>
                 </div>
-                <div class="col-12 col-md-10">
-                    <div class="bg-red d-flex justify-content-around">
-                        <h1 class="text-white">Красный блок трансформ вверх</h1>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="container-fluid why">
             <div class="container">
+                <div class="red-container mx-auto bg-red">
+                    <div class="red-container__block1">
+                        <h3 class="title_medium text-white fw-900">Как оформить займ?</h3>
+                        <p class="text-white">Для быстрого оформления, нажмите кнопку<br> “Оформить сейчас”</p>
+                    </div>
+                    <div class="red-container__block2 position-relative">
+                        <img src="img/red-block/hand.png" alt="" class="red-container__block2__img position-absolute">
+                    </div>
+                    <div class="red-container__block3">
+                        <button class="btn btn_white">Оформить сейчас</button>
+                    </div>
+                </div>
                 <div class="row">
                     <h2 class="title fw-700 text-center">Почему PROFI CREDIT?</h2>
                     <h3 class="title_small fw-300 text-gray text-center">Выбирая нас, Вы выбираете лучшее!</h3>
@@ -179,7 +196,7 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-4 d-flex flex-column align-items-start">
                         <div class="why__box d-flex align-items-center justify-content-start my-4 my-lg-5">
-                            <div class="border-red-ico">
+                            <div class="border-red-ico me-3">
                                 <img src="img/why/ico/1.png" alt="">
                             </div>
                             <div>
@@ -188,7 +205,7 @@
                             </div>
                         </div>
                         <div class="why__box d-flex align-items-center justify-content-start my-4 my-lg-5">
-                            <div class="border-red-ico">
+                            <div class="border-red-ico me-3">
                                 <img src="img/why/ico/2.png" alt="">
                             </div>
                             <div>
@@ -197,7 +214,7 @@
                             </div>
                         </div>
                         <div class="why__box d-flex align-items-center justify-content-start my-4 my-lg-5">
-                            <div class="border-red-ico">
+                            <div class="border-red-ico me-3">
                                 <img src="img/why/ico/3.png" alt="">
                             </div>
                             <div>
@@ -208,7 +225,7 @@
                     </div>
                     <div class="col-12 col-lg-4 d-flex flex-column align-items-start">
                         <div class="why__box d-flex align-items-center justify-content-start my-4 my-lg-5">
-                            <div class="border-red-ico">
+                            <div class="border-red-ico me-3">
                                 <img src="img/why/ico/4.png" alt="">
                             </div>
                             <div>
@@ -217,7 +234,7 @@
                             </div>
                         </div>
                         <div class="why__box d-flex align-items-center justify-content-start my-4 my-lg-5">
-                            <div class="border-red-ico">
+                            <div class="border-red-ico me-3">
                                 <img src="img/why/ico/5.png" alt="">
                             </div>
                             <div>
@@ -226,7 +243,7 @@
                             </div>
                         </div>
                         <div class="why__box d-flex align-items-center justify-content-start my-4 my-lg-5">
-                            <div class="border-red-ico">
+                            <div class="border-red-ico me-3">
                                 <img src="img/why/ico/6.png" alt="">
                             </div>
                             <div>
@@ -238,7 +255,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid mt-5">
             <div class="container advantages">
                 <div class="row">
                     <h2 class="title fw-700 text-center">Преимущества срочных денежных займов в МКК</h2>
@@ -247,31 +264,34 @@
                     <div class="col-12 col-xl-5 d-flex align-items-center justify-content-center order-2 order-xl-1">
                         <img src="img/advantages/girl.png" alt="" class="w-100">
                     </div>
-                    <div class="col-12 col-xl-6 order order-1 order-xl-2">
-                        <h4 class="title_small fw-700">Существует несколько наиболее приемлемых способов решения финансовых проблем.</h4>
-                        <div class="advantages__item d-xl-flex">
-                            <p class="advantages__item_num text-gray fw-900">1</p>
+                    <div class="col-12 col-xl-6 order order-1 order-xl-2 d-flex flex-column justify-content-center">
+                        <h4 class="title_small fw-700 mb-5">Существует несколько наиболее приемлемых способов решения финансовых проблем.</h4>
+                        <div class="advantages__item d-xl-flex position-relative mb-3">
+                            <p class="advantages__item_num text-gray fw-900">01</p>
                             <p>Попросить помощи у родственников или знакомых. У такого варианта есть свои плюсы. Например, неформальный характер отношений позволяет обращаться за деньгами в удобное для Вас время. Но если в будущем возникнут сложности с возвратом долга, то есть риск надолго испортить отношения с близкими. Кроме того, просьба о займе часто застает человека врасплох — у него может не оказаться свободных денег в нужном размере.
                             </p>
+                            <div class="advantages__item__line"></div>
                         </div>
-                        <div class="advantages__item d-xl-flex">
-                            <p class="advantages__item_num text-gray fw-900">1</p>
+                        <div class="advantages__item d-xl-flex position-relative mb-3">
+                            <p class="advantages__item_num text-gray fw-900">02</p>
                             <p>Заложить вещи в ломбарде. Это решение считается наименее выгодным с финансовой точки зрения. Даже небольшие суммы оформляются здесь только в обмен на дорогостоящее имущество (автомобили, шубы, антиквариат и т. п.).</p>
+                            <div class="advantages__item__line"></div>
                         </div>
-                        <div class="advantages__item d-xl-flex">
-                            <p class="advantages__item_num text-gray fw-900">1</p>
+                        <div class="advantages__item d-xl-flex position-relative">
+                            <p class="advantages__item_num text-gray fw-900">03</p>
                             <p>Обратиться в банк. Кредиты в таких организациях одобряют обычно после сложной и длительной процедуры сбора документов и их рассмотрения, то есть срочно получить деньги практически нереально. Кроме того, здесь ориентируются, прежде всего, на крупных клиентов (к примеру, покупателей недвижимости, автомобилей и т. д.).
                             </p>
+                            <div class="advantages__item__line"></div>
                         </div>
                     </div>
-                    <div class="col-12 col-xl-9 order-3 p-0">
+                    <div class="col-12 col-xl-9 order-3 py-5 px-0">
                         <h5 class="title_small fw-400 text-center"><span class="text-red">Все еще думаете, где взять займ без обмана?</span> МКК PROFI CREDIT — оптимальный выбор при временных финансовых затруднениях. Тем более представительства обязательно есть и в Вашем городе!
                         </h5>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid plus">
+        <div class="container-fluid plus pt-5">
             <div class="container">
                 <div class="row">
                     <h2 class="title fw-700 text-center">Шесть плюсов получения быстрых займов</h2>
@@ -279,7 +299,7 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-4 d-flex flex-column align-items-start justify-content-between">
                         <div class="plus__box d-flex align-items-center justify-content-start my-4 my-lg-5">
-                            <div class="border-red-ico">
+                            <div class="border-red-ico me-3">
                                 <img src="img/6+/1.png" alt="">
                             </div>
                             <div>
@@ -288,7 +308,7 @@
                             </div>
                         </div>
                         <div class="plus__box d-flex align-items-center justify-content-start my-4 my-lg-5">
-                            <div class="border-red-ico">
+                            <div class="border-red-ico me-3">
                                 <img src="img/6+/2.png" alt="">
                             </div>
                             <div>
@@ -297,7 +317,7 @@
                             </div>
                         </div>
                         <div class="plus__box d-flex align-items-center justify-content-start my-4 my-lg-5">
-                            <div class="border-red-ico">
+                            <div class="border-red-ico me-3">
                                 <img src="img/6+/3.png" alt="">
                             </div>
                             <div>
@@ -308,7 +328,7 @@
                     </div>
                     <div class="col-12 col-lg-4 d-flex flex-column align-items-start justify-content-between">
                         <div class="plus__box d-flex align-items-center justify-content-start my-4 my-lg-5">
-                            <div class="border-red-ico">
+                            <div class="border-red-ico me-3">
                                 <img src="img/6+/4.png" alt="">
                             </div>
                             <div>
@@ -317,7 +337,7 @@
                             </div>
                         </div>
                         <div class="plus__box d-flex align-items-center justify-content-start my-4 my-lg-5">
-                            <div class="border-red-ico">
+                            <div class="border-red-ico me-3">
                                 <img src="img/6+/5.png" alt="">
                             </div>
                             <div>
@@ -326,7 +346,7 @@
                             </div>
                         </div>
                         <div class="plus__box d-flex align-items-center justify-content-start my-4 my-lg-5">
-                            <div class="border-red-ico">
+                            <div class="border-red-ico me-3">
                                 <img src="img/6+/6.png" alt="">
                             </div>
                             <div>
@@ -336,6 +356,22 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="container">
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">Slide 1</div>
+                      <div class="swiper-slide">Slide 2</div>
+                      <div class="swiper-slide">Slide 3</div>
+                      <div class="swiper-slide">Slide 1</div>
+                      <div class="swiper-slide">Slide 2</div>
+                      <div class="swiper-slide">Slide 3</div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                  </div>
             </div>
         </div>
     </div>
@@ -358,5 +394,8 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="range/jquery/jquery.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>

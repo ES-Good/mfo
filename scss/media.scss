@@ -30,10 +30,10 @@
             max-width: 250px;
         }
         .input_text{
-            width: 30%;
+            width: 25%;
         }
         .btn{
-            width: 30%;
+            width: 20%;
         }
         form{
             width: 80%;
@@ -45,6 +45,88 @@
             bottom: 25px;
             width: 80%;
             font-size: inherit;
+        }
+    }
+
+    .inner-out-sum{
+        width: 25%;
+    }
+
+    .receive{
+        &__text-block{
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 0px 80px;
+            box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.5);
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &_r{
+                transform: translate(-15%, -50%);
+            }
+            &_l{
+                transform: translate(15%, -50%);
+            }
+        }
+    }
+    .red-container{
+        display: grid;
+        transform: translateY(-50%);
+        width: 80%;
+        padding: 25px 0;
+        border-radius: 15px;
+        grid-template-areas: 
+        ". b1 b1 b1 . b2 b2 b3 b3 b3 .";
+
+        &__block1{
+            grid-area: b1;
+            align-self: center;
+        }
+        &__block2{
+            grid-area: b2;
+            &__img{
+                bottom: -25px;
+                left: -130%;
+                width: 260px;
+            }
+        }
+        &__block3{
+            grid-area: b3;
+            align-self: center;
+            justify-self: center;
+        }
+    }
+    .text-line{
+        &::after{
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #7E9EAC;
+        }
+    }
+    .advantages{
+        &__item{
+            &_num{
+                font-size: 36px;
+                margin-right: 20px;
+            }
+            &__line{
+                width: 3px;
+                height: 30%;
+                background-color: #EB4B4D;
+                left: 36px;
+                top: 45px;
+                position: absolute;
+            }
         }
     }
 }
