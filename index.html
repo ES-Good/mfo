@@ -13,6 +13,49 @@
     <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form action="#" class="row px-0 px-xl-5">
+                        <div class="col-12">
+                            <h4 class="title_medium fw-900 text-red text-center">Оставьте заявку</h4>
+                            <p class="text-center">Для получения заявок, оставьте номер телефона и ваше имя. Наш менеджер расскажет вам все подробнее.</p>
+                        </div>
+                        <div class="col-12 col-lg-8 px-0 px-xl-5 mx-auto d-flex flex-column align-items-center">
+                            <input type="text" class="input_text w-100 mb-3" placeholder="Ваше имя">
+                            <input type="tel" class="input_text w-100 mb-3" placeholder="Введите номер телефона">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Согласие на обработку своих персональных данных
+                                </label>
+                            </div>
+                            <button class="btn btn_red my-5">Записаться на консультацию</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- -------------------------------Thanks -->
+                <div class="container-fluid d-none">
+                    <div class="row">
+                        <div class="col-12 mt-5">
+                            <h4 class="title_medium fw-900 text-red text-center">Заявка отправлена</h4>
+                        </div>
+                        <div class="col-12 mt-3 mb-5">
+                            <p class="text-center">Мы получили вашу заявку.
+                                Наш менеджер свяжится с вами.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- -------------------------------/Thanks -->
+            </div>
+          </div>
+        </div>
+    </div>
     <div class="container-fluid px-0 top-section">
         <div class="continer-fluid px-0 header">
             <div class="container">
@@ -22,18 +65,21 @@
                         <img src="img/logo.png" alt="">
                     </a>
                     <p class="title_small text-white m-0 d-none d-lg-block">Быстрые займы от 5 000 до 100 000 рублей</p>
-                    <div class="d-none d-lg-block">
+                    <div class="d-none d-xl-block">
                         <div class="d-flex justify-content-end align-items-center">
-                            <img src="img/phone.png" alt="">
-                            <a href="" class="styly-none title_small text-white">8 (812) 213-33-90</a>
+                            <img src="img/phone.png" alt="" class="me-2">
+                            <a href="tel:+78122133390" class="styly-none title_small text-white">8 (812) 213-33-90</a>
                         </div>
-                        <p class="m-0 text-end">с 09.00 до 21.00 (МСК)</p>
+                        <p class="m-0 text-end text-white">с 09.00 до 21.00 (МСК)</p>
                     </div>
+                    <a href="tel:+78122133390" class="d-xl-none">
+                        <img src="img/phone.png" alt="">
+                    </a>
                 </div>
                 <!-- top-block -->
             </div>
         </div>
-        <div class="container">
+        <div class="container top-block">
             <div class="row justify-content-center">
                 <div class="col-12 col-xl-5">
                     <h1 class="title fw-900"><span class="text-red">Нужны деньги?</span><br>
@@ -55,8 +101,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-xl-6 d-flex justify-content-end">
-                    <img src="img/top-section/girl.png" alt="" class="">
+                <div class="col-12 col-xl-6 d-flex justify-content-end position-relative">
+                    <div class="d-none d-xl-block position-absolute top-block__message">
+                        <img src="img/top-section/message.png" alt="" class="w-100">
+                        <p class="top-block__message__text position-absolute">Вам зачислено 57 000 <br> рублей</p>
+                    </div>
+                    <img src="img/top-section/girl.png" alt="" class="top-block__img">
                 </div>
             </div>
         </div>
@@ -67,20 +117,20 @@
                 <div class="range">
                     <span class="range__track">
                     </span>
-                    <input class="range__input" type="range" min="10000" max="100000" value="57000" step="1000">
+                    <input id="input-range" class="range__input" type="range" min="10000" max="100000" value="57000" step="1000">
                 </div>
             </div>
             <div class="col-12 container-form-index d-flex flex-column flex-xl-row align-items-center justify-content-between bg-white">
                 <h2 class="title title_small fw-700 mb-5 mb-xl-0">Сколько вам нужно?</h2>
                 <form action="#" class="d-flex flex-column flex-xl-row justify-content-between position-relative">
-                    <div class="inner-out-sum">
-                        <p class="out-sum">57000</p>
+                    <div class="inner-out-sum mb-3 mb-xl-0">
+                        <p id="out-sum" class="out-sum">57 000</p>
                     </div>
                     <input type="text" class="input_text mb-3 mb-xl-0" placeholder="Ваше имя">
                     <input type="tel" class="input_text mb-5 mb-xl-0" placeholder="+7 (___) ___ - __ - __">
                     <button type="submit" class="btn btn_red">Получить деньги</button>
                 </form>
-                <div class="form-check">
+                <div class="form-check d-none d-xl-block">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
                     <label class="form-check-label" for="flexCheckDefault">
                         Нажимая кнопку «Оформить займ», Вы даете согласие на обработку персональных данных
@@ -92,7 +142,7 @@
             <h2 class="title text-center fw-700">Быстрый займ за 4 шага:</h2>
             <h4 class="title_small text-gray text-center fw-300">Мы всегда учитываем индивидуальные потребности наших клиентов</h4>
         </div>
-        <div class="d-flex justify-content-around">
+        <div class="d-flex justify-content-around flex-wrap">
             <div class="fast-money__ico-box d-flex flex-column justify-content-center align-items-center">
                 <div class="border-red-ico mb-3">
                     <img src="img/fast-money/ico/1.png" alt="">
@@ -104,41 +154,38 @@
                 <div class="border-red-ico mb-3">
                     <img src="img/fast-money/ico/2.png" alt="">
                 </div>
-                <p class="fast-money__ico-box__text text-center">Заполните
-                небольшую анкету</p>
+                <p class="fast-money__ico-box__text text-center">Ожидайте звонок от консультанта</p>
             </div>
             <div class="fast-money__ico-box d-flex flex-column justify-content-center align-items-center">
                 <div class="border-red-ico mb-3">
                     <img src="img/fast-money/ico/3.png" alt="">
                 </div>
-                <p class="fast-money__ico-box__text text-center">Заполните
-                небольшую анкету</p>
+                <p class="fast-money__ico-box__text text-center">Подпишите договор на встрече с консультантом</p>
             </div>
             <div class="fast-money__ico-box d-flex flex-column justify-content-center align-items-center">
                 <div class="border-red-ico mb-3">
                     <img src="img/fast-money/ico/4.png" alt="">
                 </div>
-                <p class="fast-money__ico-box__text text-center">Заполните
-                небольшую анкету</p>
+                <p class="fast-money__ico-box__text text-center">Получите деньги на любые цели</p>
             </div>
         </div>
         <div class="d-flex justify-content-center my-5">
-            <button class="btn btn_red">Получить деньги</button>
+            <button class="btn btn_red" data-bs-toggle="modal" data-bs-target="#exampleModal">Получить деньги</button>
         </div>
     </div>
-    <div class="container-fluid receive px-0">
+    <div class="container-fluid receive px-0 overflow-hidden">
         <div class="container loan">
-            <div class="row">
-                <h2 class="title text-center fw-700">Как получить срочный займ?</h2>
+            <div class="row w-100">
+                <h2 class="title text-center fw-700 mb-5">Как получить срочный займ?</h2>
             </div>
-            <div class="row">
+            <div class="row w-100 px-4">
                 <div class="col-12 col-lg-5">
                     <img src="img/receive/1.png" alt="" class="w-100">
                 </div>
                 <div class="col-12 col-xl-7 position-relative">
                     <div class="receive__text-block receive__text-block_r">
                         <p class="fw-700">Во-первых, нужно подходить по следующим критериям:</p>
-                        <ul>
+                        <ul class="ps-3">
                             <li>проживать в Москве, Московской области, Санкт-Петербурге, Ленинградской области или в любом другом регионе присутствия PROFI CREDIT (Самара, Тольятти, Нижний Новгород, Челябинск, Москва, Уфа, Екатеринбург, Калининград);</li>
                             <li>иметь российское гражданство и постоянную регистрацию в любом из регионов РФ (кроме некоторых регионов);</li>
                             <li>находиться в возрастном диапазоне 24–70 лет;</li>
@@ -147,11 +194,11 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row w-100 px-4">
                 <div class="col-12 col-xl-7 position-relative order-2 order-xl-1">
                     <div class="receive__text-block receive__text-block_l">
                         <p class="fw-700">Во-вторых, необходимо подать онлайн-заявку на займ на сайте или позвонить на нашу горячую линию по номеру 8 (812) 213-33-90. Чтобы отправить онлайн-заявку на займ нужно выполнить всего 3 простых шага:</p>
-                        <ul>
+                        <ul class="ps-3">
                             <li>отметьте на калькуляторе нужную Вам сумму и срок, на который Вы хотели бы взять займ;</li>
                             <li>подтвердите свой выбор, нажав кнопку «Получить займ»;</li>
                             <li>Ответьте на звонок менеджера.</li>
@@ -162,7 +209,7 @@
                     <img src="img/receive/2.png" alt="" class="w-100">
                 </div>
             </div>
-            <div class="row my-5 justify-content-center align-items-center">
+            <div class="row w-100 px-4 my-5 justify-content-center align-items-center">
                 <div class="col-12 col-lg-3 ">
                     <p class="fw-500 ">Для получения займа могут потребоваться дополнительные документы.</p>
                 </div>
@@ -183,10 +230,11 @@
                         <p class="text-white">Для быстрого оформления, нажмите кнопку<br> “Оформить сейчас”</p>
                     </div>
                     <div class="red-container__block2 position-relative">
-                        <img src="img/red-block/hand.png" alt="" class="red-container__block2__img position-absolute">
+                        <img src="img/red-block/hand.png" alt="" class="red-container__block2__img position-absolute d-none d-md-block">
+                        <img src="img/red-block/hand.png" alt="" class="red-container__block2__img-mobile position-absolute d-block d-md-none">
                     </div>
                     <div class="red-container__block3">
-                        <button class="btn btn_white">Оформить сейчас</button>
+                        <button class="btn btn_white" data-bs-toggle="modal" data-bs-target="#exampleModal">Оформить сейчас</button>
                     </div>
                 </div>
                 <div class="row">
@@ -298,7 +346,7 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-4 d-flex flex-column align-items-start justify-content-between">
-                        <div class="plus__box d-flex align-items-center justify-content-start my-4 my-lg-5">
+                        <div class="plus__box d-flex align-items-start align-items-lg-center justify-content-start my-4 my-lg-5">
                             <div class="border-red-ico me-3">
                                 <img src="img/6+/1.png" alt="">
                             </div>
@@ -307,7 +355,7 @@
                                 <p class="mb-0 plus__box__text">Предлагаем продукты, уникальные для микрофинансового рынка в РФ: мы выдаем займы до 100 тыс. руб. на длительный срок (до 12 мес.).</p>
                             </div>
                         </div>
-                        <div class="plus__box d-flex align-items-center justify-content-start my-4 my-lg-5">
+                        <div class="plus__box d-flex align-items-start align-items-lg-center justify-content-start my-4 my-lg-5">
                             <div class="border-red-ico me-3">
                                 <img src="img/6+/2.png" alt="">
                             </div>
@@ -316,7 +364,7 @@
                                 <p class="mb-0 plus__box__text">Микрокредит может быть одобрен даже при отсутствии большого заработка и дорогостоящего залога.</p>
                             </div>
                         </div>
-                        <div class="plus__box d-flex align-items-center justify-content-start my-4 my-lg-5">
+                        <div class="plus__box d-flex align-items-start align-items-lg-center justify-content-start my-4 my-lg-5">
                             <div class="border-red-ico me-3">
                                 <img src="img/6+/3.png" alt="">
                             </div>
@@ -327,7 +375,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-4 d-flex flex-column align-items-start justify-content-between">
-                        <div class="plus__box d-flex align-items-center justify-content-start my-4 my-lg-5">
+                        <div class="plus__box d-flex align-items-start align-items-lg-center justify-content-start my-4 my-lg-5">
                             <div class="border-red-ico me-3">
                                 <img src="img/6+/4.png" alt="">
                             </div>
@@ -336,7 +384,7 @@
                                 <p class="mb-0 plus__box__text">Вся процедура, от первого обращения клиента до получения им денег, занимает не более 24 часов и не требует лишних усилий.</p>
                             </div>
                         </div>
-                        <div class="plus__box d-flex align-items-center justify-content-start my-4 my-lg-5">
+                        <div class="plus__box d-flex align-items-start align-items-lg-center justify-content-start my-4 my-lg-5">
                             <div class="border-red-ico me-3">
                                 <img src="img/6+/5.png" alt="">
                             </div>
@@ -345,7 +393,7 @@
                                 <p class="mb-0 plus__box__text">Удобные способы и графики погашения долга, приемлемые ставки</p>
                             </div>
                         </div>
-                        <div class="plus__box d-flex align-items-center justify-content-start my-4 my-lg-5">
+                        <div class="plus__box d-flex align-items-start align-items-lg-center justify-content-start my-4 my-lg-5">
                             <div class="border-red-ico me-3">
                                 <img src="img/6+/6.png" alt="">
                             </div>
@@ -358,16 +406,56 @@
                 </div>
             </div>
             <div class="container">
+                <div class="row mb-5">
+                    <h2 class="title text-center fw-700">Клиенты о нас</h2>
+                    <h4 class="title_small text-gray text-center fw-300">Наша лучшая рекомендация - это доверие наших клиентов!</h4>
+                </div>
                 <div class="swiper-container">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                       <!-- Slides -->
-                      <div class="swiper-slide">Slide 1</div>
-                      <div class="swiper-slide">Slide 2</div>
-                      <div class="swiper-slide">Slide 3</div>
-                      <div class="swiper-slide">Slide 1</div>
-                      <div class="swiper-slide">Slide 2</div>
-                      <div class="swiper-slide">Slide 3</div>
+                      <div class="swiper-slide">
+                          <div class="swiper-slide__header d-flex align-items-end mb-3">
+                              <img src="img/avatar/1.jpg" alt="" class="swiper-slide__avatar">
+                              <p class="fw-900 text-fz-20">Сергей</p>
+                          </div>
+                          <p class="fw-700">Нужны были деньги до зарплаты. За пару минут деньги пришли! Спасибо вам, очень выручили!</p>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-slide__header d-flex align-items-end mb-3">
+                            <img src="img/avatar/2.jpg" alt="" class="swiper-slide__avatar">
+                            <p class="fw-900 text-fz-20">Наталья</p>
+                        </div>
+                        <p class="fw-700">Спасибо!!! Оформила заявку и через несколько минут получила 30000 на карту! Всегда помогаете, никогда в вас не разочаровываюсь!!!</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__header d-flex align-items-end mb-3">
+                            <img src="img/avatar/3.jpg" alt="" class="swiper-slide__avatar">
+                            <p class="fw-900 text-fz-20">Иван</p>
+                        </div>
+                        <p class="fw-700">В целом, доволен услугами компании. С оформлением и обслуживанием займа не возникло проблем, что конечно безусловно, радует.</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__header d-flex align-items-end mb-3">
+                            <img src="img/avatar/4.jpg" alt="" class="swiper-slide__avatar">
+                            <p class="fw-900 text-fz-20">Татьяна</p>
+                        </div>
+                        <p class="fw-700">Надо денег - полезный сервис, который может пригодиться каждому. В моем случае, он оказался единственной возможностью дотянуть до зарплаты. Я оформила заём онлайн ночью и мне сразу пришли деньги на карточку.</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__header d-flex align-items-end mb-3">
+                            <img src="img/avatar/5.jpg" alt="" class="swiper-slide__avatar">
+                            <p class="fw-900 text-fz-20">Валентина</p>
+                        </div>
+                        <p class="fw-700">Надо денег - это одна из тех компаний, которая никогда мне не отказывала, и выручала. Иногда нужны деньги, а у друзей просить не хочется. Нашла этот онлайн сервис, и теперь пользуюсь им, когда не хватает в кошельке денег.</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide__header d-flex align-items-end mb-3">
+                            <img src="img/avatar/6.jpg" alt="" class="swiper-slide__avatar">
+                            <p class="fw-900 text-fz-20">Михаил</p>
+                        </div>
+                        <p class="fw-700">Открыл для себя этот сервис, когда в дороге сломалась машина. Своих денег на замену деталей ходовой не хватало. Посоветовали попробовать получить онлайн кредит через интернет. Сначала не верил, что можно оформить заём по телефону, но оказалось, что это абсолютно реально.</p>
+                    </div>
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
@@ -375,19 +463,25 @@
             </div>
         </div>
     </div>
-    <div class="continer-fluid px-0 bg-dark">
+    <div class="container-fluid px-0 mt-5 my-xl-3">
+        <div class="red-container_footer mx-auto bg-red d-flex flex-column flex-xl-row justify-content-around align-items-center py-4">
+            <h4 class="title_medium text-white text-center mb-4 mb-xl-0">Вступайте в ряды довольных клиентов!</h4>
+            <button class="btn btn_white" data-bs-toggle="modal" data-bs-target="#exampleModal">Получить деньги</button>
+        </div>
+    </div>
+    <div class="continer-fluid px-0 bg-dark py-5">
         <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
-                <a href="">
+            <div class="d-flex flex-column flex-xl-row justify-content-between align-items-center">
+                <a href="" class="mb-5 mb-xl-0">
                     <img src="img/logo.png" alt="">
                 </a>
-                <p class="title_small text-white m-0">Быстрые займы от 5 000 до 100 000 рублей</p>
+                <p class="title_small text-white m-0 d-none d-xl-block">Быстрые займы от 5 000 до 100 000 рублей</p>
                 <div>
-                    <div class="d-flex">
-                        <img src="img/phone.png" alt="">
-                        <a href="">8 (812) 213-33-90</a>
+                    <div class="d-flex justify-content-end align-items-center">
+                        <img src="img/phone.png" alt="" class="me-2 d-none d-xl-block">
+                        <a href="tel:+78122133390" class="styly-none title_small text-white">8 (812) 213-33-90</a>
                     </div>
-                    <p class="m-0">с 09.00 до 21.00 (МСК)</p>
+                    <p class="text-white text-end m-0">с 09.00 до 21.00 (МСК)</p>
                 </div>
             </div>
         </div>

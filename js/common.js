@@ -26,10 +26,33 @@ $(document).ready(function() {
 (jQuery);
 
 var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
-  });
+    breakpoints: {
+        1000:{
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        1200:{
+            slidesPerView: 4,
+            spaceBetween: 30
+        },
+        1600:{
+            slidesPerView: 5,
+            spaceBetween: 30
+        }
+    }
+});
+
+const outSum = document.getElementById('out-sum');
+const inputRange = document.getElementById('input-range');
+
+
+inputRange.oninput = function(){
+    let num = inputRange.value
+    outSum.innerText = (num.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 '));
+}

@@ -22,6 +22,29 @@
 }
 
 @media(min-width:1200px){
+    .range-box {
+        width: 57%;
+        top: -65%;
+        position: absolute;
+        left: 22%;
+    }
+    .top-block{
+        &__img{
+            width: auto;
+        }
+
+        &__message{
+            left: -20px;
+            top: 33%;
+            width: 200px;
+            &__text{
+                top: 35px;
+                left: 20px;
+                font-size: 12px;
+            }
+        }
+    }
+
     .container-form-index{
         padding: 60px 70px 70px;
         border-radius: 15px;
@@ -82,13 +105,18 @@
         border-radius: 15px;
         grid-template-areas: 
         ". b1 b1 b1 . b2 b2 b3 b3 b3 .";
-
+        &_footer{
+            width: 70%;
+            border-radius: 15px;
+            transform: translateY(30%);
+        }
         &__block1{
             grid-area: b1;
             align-self: center;
         }
         &__block2{
             grid-area: b2;
+            height: auto;
             &__img{
                 bottom: -25px;
                 left: -130%;
@@ -118,8 +146,12 @@
             &_num{
                 font-size: 36px;
                 margin-right: 20px;
+                &::before{
+                    display: none;
+                }
             }
             &__line{
+                display: block;
                 width: 3px;
                 height: 30%;
                 background-color: #EB4B4D;
@@ -129,10 +161,24 @@
             }
         }
     }
+    
 }
 
 @media(min-width:1400px){
     .container{
         max-width: 1600px;
+    }
+
+    .top-block{
+        &__message{
+            left: 145px;
+            top: 30%;
+            width: 270px;
+            &__text{
+                top: 40px;
+                left: 20px;
+                font-size: 16px;
+            }
+        }
     }
 }
