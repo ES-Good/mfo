@@ -1,4 +1,4 @@
 <ol>
   <li>npm i</li>
-   <li>run scss</li>
+   <li>npm run scss</li>
 </ol>  
